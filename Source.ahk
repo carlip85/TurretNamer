@@ -279,7 +279,7 @@ Return
 Main:
 SysGet, Mon1, Monitor, 1
 suspend, on
-GUI, show, w280 h155, Turret Namer 1.1.1
+GUI, show, w280 h155, Turret Namer 1.1.2
 
 Gui, Add, Text, x5 y8, Enter Turret Name:
 Gui, Add, Edit, w155 limit34 x100 y5 vTitle gTitleLab
@@ -295,7 +295,7 @@ Gui, Add, Edit, w100 Number limit4 x65 y85 vPIN gPIN
 
 Gui, Add, Button, gSet default h40 w40 x235 y65, Set
 
-Gui, Add, Slider, x115 y105 h25 w120 vBvalue gChange2 TickInterval10 Range0-%Avalue%, 75
+Gui, Add, Slider, x115 y105 h25 w120 vBvalue gChange2 TickInterval2 Range0-%Avalue%, 0
 Gui, Add, Text, x95 y110 w25 vB02 , %Bvalue%
 Gui, Add, Text, x5 y110 w80 vA02, Stacks of Ammo`:
 
