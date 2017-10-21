@@ -21,4 +21,4 @@ Press F11 to open the main menu for new settings.
 Press F8 to quit the program.
 
 Visit my Patreon Page to Support this project and more!
-https://www.patreon.com/posts/ark-turret-namer-14974523
+https://www.patreon.com/carlip
