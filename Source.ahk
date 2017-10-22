@@ -19,38 +19,40 @@ ResMultiY = % Mon1Bottom/1080
 Avalue:=24
 Bvalue:=0
 
-PinX := % 1250 * ResMultiX
-PinY := % 480 * ResMultiY
+PinX := % 1230 * ResMultiX
+PinY := % 450 * ResMultiY
 NameX := % 1140 * ResMultiX
 NameY := % 780 * ResMultiY
 NameBarX := % 960 * ResMultiX
-NameBarY := % 455 * ResMultiY
-TargetX := % 660 * ResMultiX
-TargetY := % 480 * ResMultiY
+NameBarY := % 440 * ResMultiY
+NameAccX := % 960 * ResMultiX
+NameAccY := % 670 * ResMultiX
+TargetX := % 675 * ResMultiX
+TargetY := % 450 * ResMultiY
 TargetX1 := % 730 * ResMultiX
 TargetY1 := % 360 * ResMultiY
-TargetX2 := % 660 * ResMultiX
+TargetX2 := % 670 * ResMultiX
 TargetY2 := % 610 * ResMultiY
-TargetX3 := % 850 * ResMultiX
+TargetX3 := % 840 * ResMultiX
 TargetY3 := % 820 * ResMultiY
 TargetX4 := % 1100 * ResMultiX
-TargetY4 := % 800 * ResMultiY
-TargetX5 := % 1250 * ResMultiX
-TargetY5 := % 600 * ResMultiY
+TargetY4 := % 820 * ResMultiY
+TargetX5 := % 1260 * ResMultiX
+TargetY5 := % 640 * ResMultiY
 TargetX6 := % 1200 * ResMultiX
 TargetY6 := % 350 * ResMultiY
-RangeX := % 700 * ResMultiX
-RangeY := % 690 * ResMultiY
+RangeX := % 660 * ResMultiX
+RangeY := % 630 * ResMultiY
 RangeHX := % 1260 * ResMultiX
 RangeHY := % 540 * ResMultiY
-RangeMX := % 950 * ResMultiX
-RangeMY := % 820 * ResMultiY
-RangeLX := % 660 * ResMultiX
+RangeMX := % 960 * ResMultiX
+RangeMY := % 850 * ResMultiY
+RangeLX := % 650 * ResMultiX
 RangeLY := % 540 * ResMultiY
-InvBarX := % 170 * ResMultiX
-InvBarY := % 196 * ResMultiY
-Slot1X := % 156 * ResMultiX
-Slot1Y := % 270 * ResMultiY
+InvBarX := % 210 * ResMultiX
+InvBarY := % 190 * ResMultiY
+Slot1X := % 165 * ResMultiX
+Slot1Y := % 275 * ResMultiY
 AllX := % 350 * ResmultiX
 AllY := % 182 * ResmultiY
 
@@ -94,7 +96,9 @@ Send, {v}
 Sleep, 500
 Send, {LControl Up}
 Sleep, 500
-Send, {Enter}
+MouseMove, %NameAccX%, %NameAccY%
+sleep, 500
+send {click}
 ;------
 
 ;Sets Target Mode ---
@@ -234,36 +238,43 @@ if rang = 3
 ;------
 
 ;Loads Ammo
-sleep, 500
-send {f}
-sleep, 800
-MouseMove, %InvBarX%, %InvBarY%
-sleep, 800
-send {click}
-sleep, 500
-send ADV
-sleep, 500
-MouseMove, %Slot1X%, %Slot1Y%
-sleep, 500
-send {click}
-sleep, 200
-if %bvalue% > 23
+if % Bvalue = 0
 	{
-	sleep, 200
-	MouseMove, %AllX%, %AllY%
-	sleep, 200
-	send {click}
-	send {esc}
-	return
+		return
 	}
 else
 	{
-	loop, %Bvalue%
-		{
-		send {t}
 		sleep, 500
-		}
-	send {esc}
+		send {f}
+		sleep, 800
+		MouseMove, %InvBarX%, %InvBarY%
+		sleep, 800
+		send {click}
+		sleep, 500
+		send ADV
+		sleep, 500
+		MouseMove, %Slot1X%, %Slot1Y%
+		sleep, 500
+		send {click}
+		sleep, 200
+		if %bvalue% > 23
+			{
+				sleep, 200
+				MouseMove, %AllX%, %AllY%
+				sleep, 200
+				send {click}
+				send {esc}
+				return
+			}
+		else
+			{
+				loop, %Bvalue%
+			{
+				send {t}
+				sleep, 500
+			}
+	}
+		send {esc}
 	}
 ;------
 
@@ -279,7 +290,7 @@ Return
 Main:
 SysGet, Mon1, Monitor, 1
 suspend, on
-GUI, show, w280 h155, Turret Namer 1.1.2
+GUI, show, w280 h155, Turret Namer 1.1.3
 
 Gui, Add, Text, x5 y8, Enter Turret Name:
 Gui, Add, Edit, w155 limit34 x100 y5 vTitle gTitleLab
