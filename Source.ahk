@@ -21,8 +21,8 @@ Bvalue:=0
 
 PinX := % 1230 * ResMultiX
 PinY := % 450 * ResMultiY
-NameX := % 1140 * ResMultiX
-NameY := % 780 * ResMultiY
+NameX := % 1215 * ResMultiX
+NameY := % 750 * ResMultiY
 NameBarX := % 960 * ResMultiX
 NameBarY := % 440 * ResMultiY
 NameAccX := % 960 * ResMultiX
@@ -41,8 +41,8 @@ TargetX5 := % 1260 * ResMultiX
 TargetY5 := % 640 * ResMultiY
 TargetX6 := % 1200 * ResMultiX
 TargetY6 := % 350 * ResMultiY
-RangeX := % 660 * ResMultiX
-RangeY := % 630 * ResMultiY
+RangeX := % 730 * ResMultiX
+RangeY := % 740 * ResMultiY
 RangeHX := % 1260 * ResMultiX
 RangeHY := % 540 * ResMultiY
 RangeMX := % 960 * ResMultiX
@@ -90,6 +90,7 @@ sleep, 500
 MouseMove, %NameBarX%, %NameBarY%
 Sleep, 500
 send {click}
+sleep, 500
 Send, {LControl Down}
 Sleep, 500
 Send, {v}
