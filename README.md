@@ -10,7 +10,7 @@ How to Use Turret Namer
 5. Enter PIN (Must be 4 numbers)
 6. Slide to select how much ammo to place (By the stack)
 
-It is VERY important the turret has power, it does not need to be on but only 'plugged in'. 
+It is VERY important the turret has power, it does not need to turned on, but it must be "powered". You must also have a tribe/rank system as it will add a menu to the main wheel.
 
 Once you have everything chosen you must push the SET button. 
 
