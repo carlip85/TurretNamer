@@ -86,9 +86,9 @@ sleep, 500
 MouseMove, %NameX%, %NameY%
 sleep, 500
 send {e up}
-sleep, 500
+sleep, 1000
 MouseMove, %NameBarX%, %NameBarY%
-Sleep, 500
+Sleep, 1000
 send {click}
 sleep, 500
 Send, {LControl Down}
@@ -257,12 +257,12 @@ else
 		MouseMove, %Slot1X%, %Slot1Y%
 		sleep, 500
 		send {click}
-		sleep, 200
-		if %bvalue% > 23
+		sleep, 500
+	if % %bvalue% = 24
 			{
-				sleep, 200
+				sleep, 500
 				MouseMove, %AllX%, %AllY%
-				sleep, 200
+				sleep, 500
 				send {click}
 				send {esc}
 				return
@@ -272,7 +272,7 @@ else
 				loop, %Bvalue%
 			{
 				send {t}
-				sleep, 500
+				sleep, 600
 			}
 	}
 		send {esc}
@@ -291,7 +291,7 @@ Return
 Main:
 SysGet, Mon1, Monitor, 1
 suspend, on
-GUI, show, w280 h155, Turret Namer 1.1.3
+GUI, show, w280 h155, Turret Namer 1.1.4
 
 Gui, Add, Text, x5 y8, Enter Turret Name:
 Gui, Add, Edit, w155 limit34 x100 y5 vTitle gTitleLab
