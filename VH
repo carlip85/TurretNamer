@@ -4,3 +4,6 @@ Version History
 -Adjusted X,Y coords for most buttons and fields
 -Changed named entry from {enter} to an X,Y click on the Aceept button for increased reliability
 -Skip bullet adding if value 0 is set
+
+1.1.4 -
+-Adjusted times delays for increase reliability
