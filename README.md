@@ -1,6 +1,9 @@
 # TurretNamer
 A tool to automate the task of setting up many turrets in ARK: Survival Evolved
 
+READ BEFORE USING: This tool was setup up under default keybinds, you will need to have 'E' as your use button to "use it right out of the box".
+
+
 How to Use Turret Namer
 
 1. Start .exe
