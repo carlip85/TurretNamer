@@ -7,3 +7,6 @@ Version History
 
 1.1.4 -
 -Adjusted times delays for increase reliability
+
+1.2-
+-Added support for Plant X settings
