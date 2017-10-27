@@ -281,7 +281,7 @@ else
 	loop, %Bvalue%
 		{
 			send {t}
-			sleep, 500
+			sleep, 650
 		}
 	send {esc}
 	}
@@ -460,7 +460,7 @@ suspend, on
 Avalue:=24
 Bvalue:=0
 
-GUI, show, w280 h155, Turret Namer 1.2
+GUI, show, w280 h155, Turret Namer 1.2.4
 
 modeT := 1
 modeP := 0
