@@ -1,7 +1,7 @@
 # TurretNamer
 A tool to automate the task of setting up many turrets in ARK: Survival Evolved
 
-READ BEFORE USING: This tool was setup up under default keybinds, you will need to have 'E' as your use button to "use it right out of the box".
+READ BEFORE USING: This tool was setup up under default keybinds, you will need to have 'E' as your use button to "use it right out of the box". Plant X does not have a consistent wheel menu so becareful when using this mode; if the 'E' option is sleep, the macro will not work properly. If the 'E' option is add fertilizer, the macro functions as expected.
 
 
 How to Use Turret Namer
