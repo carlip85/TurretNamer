@@ -1,6 +1,6 @@
 #NoEnv
 SetWorkingDir %A_ScriptDir%
-CoordMode, Mouse, Screen
+CoordMode, Mouse, relative
 SendMode Input
 #SingleInstance Force
 SetTitleMatchMode 2
@@ -12,11 +12,9 @@ SetKeyDelay -1
 SetMouseDelay -1
 SetBatchLines -1
 
-SysGet, Mon1, Monitor, 1
-ResMultiX = % Mon1Right/1920
-ResMultiY = % Mon1Bottom/1080
-
-color = gray
+WinGetPos,X,Y,WidX, HeiY, ARK: Survival Evolved
+ResMultiX = % WidX/1920
+ResMultiY = % HeiY/1080
 
 PinX := % 1230 * ResMultiX
 PinY := % 450 * ResMultiY
@@ -82,9 +80,9 @@ Turret:
 send {e down}
 sleep, 1000
 MouseMove, %PinX%, %PinY%
-sleep, 100
+sleep, 500
 send {e up}
-sleep, 800
+sleep, 1000
 send %PinDig1%
 sleep, 500
 send %pinDig2%
